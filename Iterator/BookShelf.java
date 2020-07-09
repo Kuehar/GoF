@@ -1,3 +1,5 @@
+package Iterator;
+
 public class BookShelf {
     private Book[] books;
     private int last = 0;
@@ -5,7 +7,7 @@ public class BookShelf {
         this.books = new Book[maxsize];
     }
     public Book getBookAt(int index){
-        return books(index);
+        return books[index];
     }
     public void appendBook(Book book){
         this.books[last] = book;
@@ -15,6 +17,6 @@ public class BookShelf {
         return last;
     }
     public Iterator iterator(){
-        return new BookShelfiterator(this);
+        return new BookShelfIterator(this);
     }
 }
