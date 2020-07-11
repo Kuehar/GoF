@@ -1,5 +1,5 @@
-package Factory;
 package idcard;
+import framework.*;
 import java.util.*;
 
 public class IDCardFactory extends Factory{
@@ -8,7 +8,7 @@ public class IDCardFactory extends Factory{
         return new IDCard(owner);
     }
     protected void registerProduct(Product product){
-        owners.add(((IDCard)product).getOwner);
+        owners.add(((IDCard)product).getOwner());
     }
     public List getOwners(){
         return owners;
